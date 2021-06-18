@@ -1,0 +1,22 @@
+header {
+    background: #ffffff;
+}
+.border-radius{
+    background: #441236;
+    border-radius: 40%;
+    width:120px;
+}
+
+.sitename{
+    color: #ffffff;
+}
+
+.title {
+    color: #ffffff;
+    
+}
+
+body {
+    background-color: #F7F7F7;
+}
+

@@ -1,0 +1,48 @@
+@charset 'utf-8';
+header {
+    background: #ffffff;
+}
+.border-radius{
+    background: #441236;
+    border-radius: 40%;
+    width:120px;
+}
+
+.sitename{
+    color: #ffffff;
+}
+
+.title {
+    color: #ffffff;
+    
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+.btn-mosw {
+    color: #fff;
+    background-color: #eb6100;
+  }
+  .btn-mode:hover,
+  .btn-mode:hover {
+    color: #fff;
+    background: #f56500;
+  }
+
+.input_box {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+    height :30em;
+    max-height: 1000px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    outline: none;
+    line-height: 1.6;
+    resize: vertical;
+  }
