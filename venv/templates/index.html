@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Crack a Code - AIを搭載した暗号解読ツール - </title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -22,19 +23,29 @@
     <main>
         <br>
         <br>
-        <button type="button" class="btn-mode">暗号の解読</button>
-        <button type="button" class="btn-mode">暗号の作成</button>
-        <br>
-        <br>
-        <div class="relative">
-            <textarea class="input_box" col=30 row=100 placeholder="変換するテキストを入力"></textarea>
-            <br>
-            <br>
-            <br>
-            <img src="https://i.gyazo.com/7cd17c3c34bc51f8a2ddfe34154ebf06.png" title="arrow" class="arrow_box">
+        <div>
+            <button type="button" id="t1" class="btn-mode chosen" onclick="clickBtn1()">暗号の解読</button>
+            <button type="button" id="t2" class="btn-mode" onclick="clickBtn2()">暗号の作成</button>
         </div>
 
+        <br>
+        <br>
+        <form name="input" action="encryption" method="POST">
+            <div class="relative">
+                <textarea id="textarea1" name="code" class="input_box" col=30 row=100 placeholder="解読するテキストを入力"></textarea>
+                <br>
+                <br>
+                <br>
+                <input type="image" src="https://i.gyazo.com/7cd17c3c34bc51f8a2ddfe34154ebf06.png" title="arrow" class="arrow_box id="button1" value="send!" onClick="sendData();">
+            </div>
+        </form>
         <table class="results" align="center">
+            {{results}}
+            {% for key, value in result.iteritems() %}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+             </tr>
             <tr>
                 <th>
                     <textarea class="result_box" name="text1" col=30 row=2 value="結果1" readonly></textarea>
@@ -61,5 +72,7 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="static/js/chart.js"></script>
+    <script src="static/js/mode.js"></script>
+
 </body>
 </html>
