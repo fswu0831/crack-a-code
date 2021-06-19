@@ -31,7 +31,12 @@ body {
   .btn-mode:hover,
   .btn-mode:hover {
     color: #000;
-    background: #fff;
+    background-color: #fff;
+    min-width: 160px;
+    height:66px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    cursor: pointer;
   }
 
 .input_box {
@@ -48,7 +53,7 @@ body {
     font-size: 14px;
     outline: none;
     line-height: 1.6;
-    resize: vertical;
+    resize: none;
   }
 
 .arrow_box {
@@ -62,16 +67,19 @@ body {
     text-align : center;
 }
 
-.results {
-    display: flex;
+
+
+
+.results{
+    width:100%;
 }
 
-.results_graph {
+.result_box {
+    width: 90%;
+    padding: 8px;
     border-radius: 5px;
-    background-color: #fff;
-}
-
-.results_text {
-    border-radius: 5px;
-    background-color: #fff;
-}
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+  }
