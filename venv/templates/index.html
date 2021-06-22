@@ -40,28 +40,26 @@
             </div>
         </form>
         <table class="results" align="center">
-            {{results}}
-            {% for key, value in result.iteritems() %}
             <tr>
-                <th> {{ key }} </th>
-                <td> {{ value }} </td>
-             </tr>
+                {% for i0 in r0 %}
+                <td>
+                    <textarea class="result_box" name="text1" col=30 row=2 readonly>{{ i0 }}</textarea>
+                </td>
+                {% endfor %}
+            </tr>
             <tr>
-                <th>
-                    <textarea class="result_box" name="text1" col=30 row=2 value="結果1" readonly></textarea>
-                </th>
-                <th>
-                    <textarea class="result_box" name="text2" col=30 row=2 value="結果1" readonly></textarea>
-                </th>
-                <th>
-                    <textarea class="result_box" name="text3" col=30 row=2 value="結果1" readonly></textarea>
-                </th>
-                <th>
-                    <textarea class="result_box" name="text4" col=30 row=2 value="結果1" readonly></textarea>
-                </th>
-                <th>
-                    <textarea class="result_box" name="text5" col=30 row=2 value="結果1" readonly></textarea>
-                </th>
+                {% for i1 in r1 %}
+                <td>
+                    <div class="bar_chart">{{ i1 }}</div>
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i2 in r2 %}
+                <td>
+                    <textarea class="result_box" name="text1" col=30 row=1 readonly>{{ i2 }}</textarea>
+                </td>
+                {% endfor %}
             </tr>
         </table>
 
